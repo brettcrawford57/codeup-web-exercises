@@ -1,4 +1,4 @@
-console.log("Hello from external JavaScript");
+/* console.log("Hello from external JavaScript");
 
 alert("Welcome to my website!");
 
@@ -36,4 +36,19 @@ if ((full == true) || (conflict == true)) {
     alert("We're sorry but we're not able to enroll you at this time. Please try again later.")
 }   else    {
     alert("Awesome! We look forward to working with you on the enrollment process!")
+}
+
+//A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
+// Premium members do not need to buy a specific amount of products.
+*/
+
+alert("Welcome to Super Store!");
+
+var premium = confirm("Are you a premium member?");
+var morethan2 = confirm("Are you purchasing more than two items?");
+var hasexpired = confirm("Has the date on your coupon expired?");
+if (((premium == true || morethan2 == true) && !hasexpired == true)) {
+    alert("Success! We applied the offer!")
+}   else    {
+    alert("We're sorry but we cannot apply the offer")
 }
