@@ -52,7 +52,7 @@ alert("Welcome to Super Store!");
 var premium = confirm("Are you a premium member?");
 var morethan2 = confirm("Are you purchasing more than two items?");
 var hasexpired = confirm("Has the date on your coupon expired?");
-if (((premium == true || morethan2 == true) && !hasexpired == true)) {
+if ((premium == true || morethan2 == true) && !hasexpired == true) {
     alert("Success! We applied the offer!")
 }   else    {
     alert("We're sorry but we cannot apply the offer")
