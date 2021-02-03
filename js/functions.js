@@ -10,9 +10,9 @@
  */
 
 function sayHello(name) {
-    return ("Hello, " + name)
+    return ("Hello, " + name + "!")
 }
-name =
+
 console.log(sayHello);
 
 /**
