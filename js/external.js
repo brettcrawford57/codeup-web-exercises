@@ -31,7 +31,8 @@ var TotalPay = GooglePay+AmazonPay+FacebookPay
 
 alert("I see you make some decent money! Your paycheck should reflect $"+ (TotalPay) + ". Can I borrow $5.00?");
 
-//A student can be enrolled in a class only if the class is not full and the class schedule
+//Exercise 3.3
+// A student can be enrolled in a class only if the class is not full and the class schedule
 //does not conflict with her current schedule.
 
 alert("Congratulations on taking your first steps to enroll into school! We're proud of you!");
@@ -44,7 +45,8 @@ if ((full == true) || (conflict == true)) {
     alert("Awesome! We look forward to working with you on the enrollment process!")
 }
 
-//A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
+//Exercise 3.4
+// A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
 // Premium members do not need to buy a specific amount of products.
 
 alert("Welcome to Super Store!");
