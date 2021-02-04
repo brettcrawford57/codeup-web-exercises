@@ -12,8 +12,9 @@
 function sayHello(name) {
     return ("Hello, " + name + "!")
 }
+var myName = "Brett"
 
-console.log(sayHello);
+console.log(sayHello(myName));
 
 /**
  * TODO:
