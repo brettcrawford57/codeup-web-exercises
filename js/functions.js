@@ -10,11 +10,10 @@
  */
 
 function sayHello(name) {
-    return ("Hello, " + name + "!")
+    return "Hello, " + name + "!";
 }
-var classroom = "codeup"
 
-console.log(sayHello(classroom));
+console.log(sayHello("Codeup"));
 
 /**
  * TODO:
