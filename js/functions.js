@@ -12,9 +12,9 @@
 function sayHello(name) {
     return ("Hello, " + name + "!")
 }
-var myName = "Brett"
+var classroom = "codeup"
 
-console.log(sayHello(myName));
+console.log(sayHello(classroom));
 
 /**
  * TODO:
@@ -24,12 +24,20 @@ console.log(sayHello(myName));
  * console.log 'helloMessage' to check your work
  */
 
+var helloMessage = sayHello("Brett")
+
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+var myName = "Brett"
+
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -53,6 +61,16 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num){
+    return (2 === num);
+}
+var number = 2
+
+console.log(isTwo(number));
+
+console.log(isTwo(random));
+
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -65,12 +83,22 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tip, bill) {
+    return tip * bill
+}
+
+console.log(calculateTip(.20,20));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+var bill = parseFloat(prompt("How much was your bill?"))
+var tip = parseFloat(prompt("How much would you like to tip? (%)"))
+alert("Amount you should tip is $" + (bill*tip))
 
 /**
  * TODO:
@@ -86,3 +114,22 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(price, discount){
+    return price - (price * discount)
+}
+
+console.log(applyDiscount(450,.27))
+
+
+// var globalVar = "globalVar: Look, I'm global";
+//
+// function scopeExample(){
+//     globalVar= "I'm inside the function!"
+//     var localVar = "localVar: Look, I'm local!"
+//     alert(localVar);
+//     alert(globalVar);
+// }
+//
+// scopeExample();
+// alert(globalVar);
