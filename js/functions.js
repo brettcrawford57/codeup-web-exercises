@@ -1,5 +1,6 @@
 "use strict";
 
+
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -97,7 +98,8 @@ console.log(calculateTip(.20,20));
 
 var bill = parseFloat(prompt("How much was your bill?"))
 var tip = parseFloat(prompt("How much would you like to tip? (%)"))
-alert("Amount you should tip is $" + (bill*tip))
+var calculatedTip = calculateTip(bill, tip)
+alert("Amount you should tip is $" + calculatedTip)
 
 /**
  * TODO:
@@ -119,7 +121,6 @@ function applyDiscount(price, discount){
 }
 
 console.log(applyDiscount(450,.27))
-
 
 // var globalVar = "globalVar: Look, I'm global";
 //
