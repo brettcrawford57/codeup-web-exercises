@@ -34,7 +34,7 @@ function analyzeColor(color){
         return "I'm sure this color means something special to you..."
     }
 }
-console.log(analyzeColor("blue"))
+console.log(analyzeColor("red"))
 
 
 // Don't change the next two lines!
@@ -42,8 +42,10 @@ console.log(analyzeColor("blue"))
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet','cyan'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
@@ -107,6 +109,25 @@ alert(analyzeColor(whatColor))
  * return value.
  */
 
+// function calculateTotal(luckyNumber, totalAmount){
+//     if (luckyNumber === 0){
+//         return 100 / discount
+//     } else if (luckyNumber === 1){
+//         return 100 / discount
+//     } else if (luckyNumber === 2){
+//
+//     }
+// }
+
+// switch (luckyNumber){
+//     case 0:
+//
+//     break;
+//
+// }
+//
+// console.log(calculateTotal(3,.35))
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -133,3 +154,24 @@ alert(analyzeColor(whatColor))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var wantsToEnterNumber = confirm("Would you like to enter a number?")
+
+if(wantsToEnterNumber) {
+    var enteredNumber = parseInt(prompt("What number would you like to choose?"))
+
+    if(enteredNumber % 2 === 0){
+        alert("You chose an even number")
+    } else {
+        alert("You chose an odd number")
+    }
+        alert("Your number plus 100 is " + (100 + enteredNumber))
+
+    if(enteredNumber >0){
+        alert("Your number is positive!")
+    } else {
+        alert("Your number is negative!")
+    }
+}else{
+    alert("That's not a number!")
+}
