@@ -16,20 +16,20 @@
 //     }
 // }
 //
-
+//
 //
 // for(var i = 1 ; i < 10 ; i++) {
 //     console.log(i);
 // }
-
-
-for(var i=1 ; i < 10; i++){
-        var str = "1".repeat(i)
-            console.log(str);
-    }
-
 //
-// for(var i = 100 ; i > 0 ; i = i-5){
+//
+// for(var i = 1 ; i < 10 ; i++){
+//         var str = "1".repeat(i)
+//         console.log(str);
+// }
+//
+//
+// for(var i = 100 ; i > 0 ; i = i - 5){
 //     console.log(i);
 // }
 //
