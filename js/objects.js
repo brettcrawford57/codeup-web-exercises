@@ -86,11 +86,18 @@ var books = [
                 firstName: "R.L.",
                 lastName: "Stine"
             }
+        },
+        {
+            title: "Goobers",
+            author: {
+                firstName: "Ya",
+                lastName: "Boi"
+            }
         }
         ]
 
-    console.log(books[0].title)
-    console.log(books[0].author.firstName)
+    console.log(books[1].title)
+    console.log(books[1].author.firstName)
     console.log(books[0].author.lastName)
 
     /**
@@ -135,5 +142,28 @@ var books = [
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    // function createBook (bookTitle, authorFirst, authorLast){
+    //     var newBook = {
+    //         title: bookTitle,
+    //         author : {
+    //             firstName: authorFirst,
+    //             lastName: authorLast
+    //         }
+    //     }
+    //     return newBook;
+    // }
+    //
+    // console.log(createBook("Black Hole Sun", "Some", "Guy"));
+
+    function showBookInfo(bookObject, bookNumber){
+        console.log("Book # " + (bookNumber + 1));
+        console.log("Title: " + bookObject.title);
+        console.log("Author: " + bookObject.firstName + " " + bookObject.lastName)
+        console.log("---")
+    }
+    books.forEach(function(book, index ){
+        showBookInfo(book, index)
+    })
 
 })();
