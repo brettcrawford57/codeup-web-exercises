@@ -1,3 +1,55 @@
 .fancy-header {
-    color:rebeccapurple;
+    color: rebeccapurple;
+    text-align: center;
+    text-decoration: underline;
+
 }
+
+h3 {
+    color: indigo;
+    text-decoration: underline;
+}
+
+body{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: large;
+    /*background: rgba(150,120,50,.5);*/
+    background-image: url(../img/Monasterio_Khor_Virap,_Armenia,_2016-10-01,_DD_25.png);
+    /*background-repeat: no-repeat ;*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul, ol{
+    list-style: "* ";
+}
+
+/*ol{*/
+/*    list-style: "* ";*/
+/*}*/
+
+table, td, th{
+    border: 1px solid black;
+}
+
+td, th{
+    padding: 10px;
+}
+
+a:link {
+    color:blue;
+}
+
+a:visited {
+    color:red;
+}
+
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+a:active {
+    color:green;
+}
+
