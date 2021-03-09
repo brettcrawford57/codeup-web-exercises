@@ -7,30 +7,31 @@ body, html {
 }
 
 
-.message{
-    border: 1px solid grey;
+.message {
+    border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    width: 80%;
+    padding: .6em .9em;
+    margin: 8px;
+    font-size: .9em;
 }
 
 .message-info{
     color: darkblue;
-    background-color: lightblue;
+    background-color: #c8d7f7;
 }
 
 .message-success{
     color: green;
-    background-color: lightgreen;
+    background-color: #c9ebd5;
 }
 
 .message-warning{
-    color: saddlebrown;
-    background-color: yellow;
+    color: #8b791d;
+    background-color: #f4f3c3;
 }
 
 .message-error{
     color: darkred;
-    background-color: pink;
+    background-color: #f0d2d6;
 }
+
