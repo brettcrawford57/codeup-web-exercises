@@ -69,6 +69,7 @@ fieldset {
     padding: 4px 0;
     margin: .5em 0;
     width: calc(100% - 4px);
+    border: 1px solid lightgray;
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
 
