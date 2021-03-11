@@ -6,7 +6,6 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-
 .message {
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -34,4 +33,3 @@ body, html {
     color: darkred;
     background-color: #f0d2d6;
 }
-
