@@ -130,6 +130,7 @@ section:nth-of-type(6) {
     align-items: center;
     align-content: space-between;
     flex-wrap: wrap;
+    padding: .5em 0;
 }
 
 .grey-box {
