@@ -30,4 +30,3 @@ $("p").hover(function() {
         $(this).html(value.toLowerCase());
     }
 );
-
