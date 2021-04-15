@@ -61,15 +61,15 @@ function checkWeatherTwo(isRaining) {
 /*
 * let and const (block scope vs. function scope)
 */
-
-{
-    var a = 10;
-}
-{
-    let b = 20;
-}
-
-const c = 30;
+//
+// {
+//     var a = 10;
+// }
+// {
+//     let b = 20;
+// }
+//
+// const c = 30;
 
 // console.log(a); // 10
 // console.log(b); // Uncaught ReferenceError: b is not defined
@@ -110,8 +110,9 @@ let greeting = "Hello my name is " + firstName + ' ' + lastName + '.';
 
 //TODO: Refactor code from above, using template strings.
 
+let newGreeting = `Hello, my name is ${firstName} ${lastName}`
 
-// console.log(newGreeting);
+ console.log(newGreeting);
 
 
 
@@ -141,8 +142,14 @@ itemsHtml += "</ul>";
 
 //new way
 
+let newItemsHtml = `
+    <ul>
+        <li>${items[0]}</li>
+        <li>${items[1]}</li>
+        <li>${items[2]}</li>
+    </ul>`
 
-// console.log(newItemsHtml);
+console.log(newItemsHtml);
 
 
 /*==============================================*/
@@ -156,8 +163,10 @@ let program = {
     technology: "HTML, CSS, JS, Java"
 }
 
-
-// console.log(programLetter);
+let programLetter = `Hello and thank you for your interest in ${program.name}!
+Our program is located in ${program.location}. 
+The program lasts ${program.length}.`
+    console.log(programLetter);
 
 
 
@@ -169,10 +178,10 @@ let program = {
  *****************************/
 
 
-// const arr = ["one", "two", "three"];
-// for (let ele of arr) {
-//     console.log(ele);
-// }
+const arr = ["one", "two", "three"];
+for (let ele of arr) {
+    console.log(ele);
+}
 
 
 
@@ -182,7 +191,9 @@ let program = {
 //TODO: Using for of loops, log each day
 
 const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
-
+for (let ele of days){
+    console.log(ele);
+}
 
 
 /*==============================================*/
@@ -190,7 +201,9 @@ const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"
 //TODO: Using for of loops, log each instructors name
 
 const instructors = ["Douglas", "Kenneth", "Justin", "Casey", "David"]
-
+for (let ele of instructors){
+    console.log(ele);
+}
 
 
 
@@ -200,16 +213,20 @@ const instructors = ["Douglas", "Kenneth", "Justin", "Casey", "David"]
 //TODO TOGETHER: Rewrite the following function using arrow function syntax
 
 
-function sayHello(name){
-    return `Hello ${name}`;
-}
+// function sayHello(name){
+//     return `Hello ${name}`;
+// }
 
+//v1
+// let sayHelloAgain = (name) => {return `Hello ${name}!`}
+//v2
+// let sayHelloAgain = (name) => `Hello ${name}!`
+//v3
+let sayHelloAgain = name => `Hello ${name}!`
 
-
-
-// console.log(sayHelloAgain("Douglas")); //Hello Douglas
-// console.log(sayHelloAgain("Justin")); //Hello Justin
-// console.log(sayHelloAgain("Kenneth")); //Hello Kenneth
+console.log(sayHelloAgain("Douglas")); //Hello Douglas
+console.log(sayHelloAgain("Justin")); //Hello Justin
+console.log(sayHelloAgain("Kenneth")); //Hello Kenneth
 
 
 
@@ -220,13 +237,12 @@ function sayHello(name){
 // 	return a + b;
 // }
 
+let sum = (a, b) => a + b
 
 
-
-
-// console.log(sum(5, 3)); //8
-// console.log(sum(5, 20)); //25
-// console.log(sum(1, 9)); //10
+console.log(sum(5, 3)); //8
+console.log(sum(5, 20)); //25
+console.log(sum(1, 9)); //10
 
 
 
@@ -280,20 +296,19 @@ const addOneD = arg1 => arg1 + 1;
 //TODO Together: Refactor the following using ES6
 
 // old way
-// function sayHello(name) {
-// 	if (typeof name === 'undefined') {
-// 		name = 'World';
-// 	}
-//
-// 	return 'Hello, ' + name + '!';
-// }
+function sayHello(name) {
+	if (typeof name === 'undefined') {
+		name = 'World';
+	}
+
+	return 'Hello, ' + name + '!';
+}
+
+let sayHello2 = (name = "World") => `Hello, ${name}`
 
 
-
-
-
-// console.log(sayHello2());; // "Hello, World!"
-// console.log(sayHello2('codeup'));; // "Hello, codeup!"
+console.log(sayHello2());; // "Hello, World!"
+console.log(sayHello2('codeup'));; // "Hello, codeup!"
 
 
 

@@ -10,22 +10,27 @@
 // let dogName = "Kewpie";
 // let isCute = true;
 
-//old way
+// old way
 // let oldDog = {
 // 	breed: breed,
 // 	age: age,
 // 	dogName: dogName,
 // 	isCute: isCute
 // }
-//
+
 // console.log(oldDog);
 
 
 
 // //new way
 
-
-
+// let newDog = {
+//     breed,
+//     age,
+//     dogName,
+//     isCute
+// }
+//
 // console.log(newDog);
 
 
@@ -40,12 +45,12 @@
 
 var personA = {
     name: 'codeup',
-    age: 4
+    age: 7
 };
 
 // // old way
-// var name = personA.name;
-// var age = personA.age;
+// let name = personA.name;
+// let age = personA.age;
 //
 //
 // console.log(name); // 'codeup'
@@ -54,8 +59,8 @@ var personA = {
 
 //TODO TOGETHER: REFACTOR the above approach using ES6
 
-
-
+// const {name, age} = personA;
+//
 // console.log(name);
 // console.log(age);
 
@@ -87,10 +92,11 @@ const pals = {
 //TODO TOGETHER: REFACTOR the above approach using ES6
 //new way
 
+let {dog,cat,mouse} = pals
 
-// console.log(dog);
-// console.log(cat);
-// console.log(mouse);
+console.log(dog);
+console.log(cat);
+console.log(mouse);
 
 
 /*==============================================*/
@@ -104,10 +110,10 @@ const theFlash = {
     powers: "Super Speed"
 }
 
+let {alias, powers} = theFlash;
 
-
-// console.log(alias);
-// console.log(powers);
+console.log(alias);
+console.log(powers);
 
 
 /*==============================================*/
@@ -123,10 +129,10 @@ let cats = ["CJ", "Claude", "Max"];
 
 //new way
 
-
-// console.log(cat1);
-// console.log(cat2);
-// console.log(cat3);
+let [cat1, cat2, cat3] = cats
+console.log(cat1);
+console.log(cat2);
+console.log(cat3);
 
 
 /*==============================================*/
@@ -141,7 +147,8 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: new way
 
-
+// const [a,b,c] = alphabet
+//
 // console.log(a);
 // console.log(b);
 // console.log(c);
@@ -150,16 +157,18 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //TODO TOGETHER: To skip an element...
 
-
+// const [a, ,c] = alphabet
+//
 // console.log(a);
-// // console.log(b);
+// console.log(b);
 // console.log(c);
 // console.log(d);
 
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
 
-
+// const [a,b,c, ...rest] = alphabet
+//
 // console.log(a);
 // console.log(b);
 // console.log(c);
@@ -181,32 +190,39 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 //new way
 
+function tellMeAbout({name, age}){
+    console.log(name); // ''
+ 	console.log(age); // 4
+}
 
-//
-// const person = {
-// 	name: 'Douglas',
-// 	age: 38
-// };
-//
-// tellMeAbout(person);
+
+const person = {
+	name: 'Douglas',
+	age: 38
+};
+
+tellMeAbout(person);
 
 
 /*==============================================*/
 
 
 
-// let shape1 = {
-// 	height: 10,
-// 	width: 10
-// }
+let shape1 = {
+	height: 10,
+	width: 10
+}
 
-// let shape2 = {
-// 	height: 5,
-// 	width: 5
-// }
+let shape2 = {
+	height: 5,
+	width: 5
+}
 
-// console.log(getArea(shape1)); //100
-// console.log(getArea(shape2)); //25
+let getArea = ({height, width}) => height * width
+
+console.log(getArea(shape1)); //100
+console.log(getArea(shape2)); //25
 
 
 //TODO: Refactor the getArea function from above using arrow syntax
+
