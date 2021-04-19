@@ -48,7 +48,13 @@ let userEmails = users.map(function(elemail){
 
 console.log(userEmails);
 
+let totalYears = users.reduce(function(totalYears, user){
+    return totalYears + user.yearsOfExperience;
+}, 0)
 
+let averageYears = totalYears / users.length;
+
+console.log(averageYears);
 
 let longestEmail = users.reduce(function(longEmail, user){
         if (longEmail.length < user.email.length){
@@ -57,6 +63,12 @@ let longestEmail = users.reduce(function(longEmail, user){
 }, "")
 
 console.log(longestEmail);
+
+let userString = users.reduce(function(accum, user){
+    return `${accum} ${user.name}`;
+}, ''.slice(0, -1) + "")
+
+console.log(userString);
 
 let uniqueLanguage = users.reduce(function(langList, user, index) {
     user.languages.forEach(function(language){
